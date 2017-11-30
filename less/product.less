@@ -1,0 +1,49 @@
+@charset "utf-8";
+@import url("./base.less");
+@import url("./common.less");
+.reset();
+ 
+ 
+ // 折扣商品展示
+ .rebate_content_warp{
+ >a{
+   display: block;
+  .rebate_content{
+    padding: 10px 0;
+    border-bottom: 1px solid #cccccc;
+    .bgc(#fff);
+    // 折扣图片
+    .rebate_img{
+      .px2rem(height,80);
+      .px2rem(width,80);
+      .fl();
+      >img{
+        .w();
+        .h(100%);
+      }
+    }
+    .rebate_info{
+      padding:0 10px;
+      overflow: hidden;
+      // 折扣商品信息上部
+      .rebate_top{
+        .font-size(30);
+        font-weight: 800;
+        .rebate_money{
+          color: @base-color;
+        }
+      }
+      // 折扣信息下部
+      .rebate_bottom{
+        span{
+          color: #a09898;
+        }
+        .mt(20px);
+        .rebate_num{
+          .fr();
+        }
+      }
+    }
+  }
+ }
+}

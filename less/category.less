@@ -1,0 +1,62 @@
+
+@charset "utf-8";
+@import url("./base.less");
+@import url("./common.less");
+.reset();
+.cate_main{
+  .w();
+  .ul_warp{
+    .w();
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    // box-sizing: content-box;
+    >li{
+      .bgc(#EFEFEF);
+      border-bottom: 1px solid #ccc;
+      padding-top: 10px;
+      >span{
+        display:inline-block;
+        .font-size(30);
+      }
+      .cate_title{
+        margin-bottom: 10px;
+        margin-left: 10px;
+      }
+      // padding: 10px;
+      .row_up{
+        .w(18px);
+        .h(10px);
+        .fr();
+        margin-right: 10px;
+        margin-top: 5px;
+        background-image: url("../images/icon_bar.png");
+        background-position: -353px 0;
+      }
+
+      .inner_warp{
+          display: none;
+        
+        border: 1px solid #ccc;
+        .bgc(#fff);
+        >li{
+          .w(33.3333%);
+          .h(40px);
+          .lh(40px);
+          .fl();
+          .ta();
+          
+          border-bottom: 1px solid #ccc;
+          border-right: 1px solid #ccc;
+          &:nth-child(3n){
+           
+            border-right:none;
+          }
+          &:last-child{
+            border-bottom: none;
+          }
+
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+/*
+ * @Author: 贾倾真 
+ * @Date: 2017-11-28 19:32:14 
+ * @Last Modified by: 贾倾真
+ * @Last Modified time: 2017-11-28 19:34:40
+ */
+@charset 'utf-8';
+@import url("./base.less");
+@import url("./common.less");
+header{
+  .w();
+  // 顶部
+  .header_top{
+    .w();
+    .px2rem(height,50);
+    .bgc(#FF841D);
+    .px2rem(padding-top,12);
+    .pic_left{
+      .px2rem(width,370/2);
+      .fl();
+      .px2rem(margin-left,32/2);
+    }
+    .pic_right{
+      .px2rem(width,30);
+      .fr();
+      .px2rem(margin-right,16);
+    }
+  }
+  // 搜索框
+  .header_search{
+    .px2rem(height,50);
+    .w();
+    .bgc(#fff);
+    .px2rem(padding,10);
+    
+   >form{
+     .pr();
+    >input{
+      .w();
+      .h(30px);
+      .bgc(#F1F1F1);
+      .px2rem(border-radius,15);
+      .px2rem(padding-left,10);
+    }
+    .search_btn{
+      .pa();
+      right: 0;
+      top: 0;
+      .h(30px);
+      .w(50px);
+      .bgc(#FF841D);
+      outline: none;
+      .bd-none;
+      .px2rem(border-radius,15);
+        color: #fff;
+    }
+   }
+  }
+}
+
+
+
+// 底部通栏
+.M_foot{
+  
+    // 底部通栏顶部
+    .foot_top{
+      >ul{
+        border-bottom: 1px solid #cccccc;
+        border-top: 1px solid #cccccc;
+        >li{
+          .fl();
+          border-right: 1px solid #cccccc;
+          &:last-child{
+            border-right: none;
+          }
+          >a{
+            display: block;
+            .h(35px);
+            .lh(35px);
+            .ta();
+            >img{
+              .w(15px);
+              .h(15px);
+              vertical-align:middle;
+            }
+          }
+        }
+      }
+    }
+  
+  
+    // 底部通栏顶部
+    .foot_bottom{
+      .ta();
+      margin-top: 15px;
+      .pb(10px);
+      >div{
+        .foot_app{
+          color: @base-color;
+          font-weight: 800;
+        }
+        .foot_phone{
+          font-weight: 800;
+        }
+      }
+    }
+  }

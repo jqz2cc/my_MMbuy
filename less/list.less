@@ -1,0 +1,107 @@
+@charset "utf-8";
+@import url("./base.less");
+@import url("./common.less");
+.reset();
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// 导航条
+.nav{
+  .w();
+  .mt(10px);
+  .mb(10px);
+  // border: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  .lh(40px);
+  .h(40px);
+  padding:0 10px;
+  >a{
+    .fl();
+  }
+  >span{
+    .fl();
+  }
+  >button{
+    .fr();
+    .bd-none;
+    .w(60px);
+    .h(30px);
+    .bgc(#E6E6E6);
+    margin-top: 4px;
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 2px #ccc;
+    }
+}
+
+
+// 内容区域
+.categoryLiast_content{
+  .w();
+  .List{
+    .w();
+
+    >li{
+      >a{
+        display: block;
+        // 图片盒子
+    .List_pic{
+      .fl();
+      .px2rem(width,120);
+      .px2rem(height,85);
+      padding: 5px;
+      >img{
+        .w();
+        .h(100%);
+      }
+    }
+
+    // 数据信息
+    .List_info{
+      overflow: hidden;
+      padding:0 10px;
+      .list_title{
+        .font-size(30);
+        font-weight: 800;
+      }
+      .list_money{
+        .font-size(30);
+        color: @base-color;
+        margin: 10px 0;
+      }
+      .price_pj{
+        color: #ccc
+      }
+    }
+      }
+    }
+  }
+
+
+
+
+  // 分类列表页样式
+
+  .list_page{
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    >button{
+      .bgc(#E2E2E2);
+      .bd-none;
+      .w(80px);
+      .h(30px);
+    }
+    >select{
+      .w(60px);
+      border: 1px solid #ccc;
+    }
+  }
+}
+
+

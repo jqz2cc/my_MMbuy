@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./lib/css/flexible.css">
+  <link rel="stylesheet" href="./css/page_common.css">
+  <link rel="stylesheet" href="./css/page_com.css">
+  <link rel="stylesheet" href="./css/getproduct.css">
+
+</head>
+
+<body>
+  <!-- 顶部通栏 -->
+  <header>
+    <!-- 挖个大坑用来放顶部通栏 -->
+  </header>
+  <!-- 导航地址 -->
+  <div class="nav">
+    <a href="index.html">首页</a>
+    <span>></span>
+    <a href="category.html">电视</a>
+    <span>></span>
+    <a href="#">哈哈哈哈</a>
+    <button>搜索</button>
+
+  </div>
+  <div class="product_main">
+    <div class="main_info">
+      <!-- 挖坑哈哈哈哈哈 -->
+
+    </div>
+    <div class="info_list clearfix">
+      <a href="">比价购买</a>
+      <a href="">产品参数</a>
+      <a href="">评价(123134)</a>
+    </div>
+    <!-- table -->
+    <div class="info_table">
+
+    </div>
+    <div class="info_text">
+      哈哈哈哈哈哈哈哈会变得很撒花哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+    </div>
+    <!-- 评价 -->
+    <div class="info_assess">
+      <div class="assess_title">
+        网友评价
+      </div>
+      <div class="assess_container">
+        <!-- 挖个大的坑 -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 底部通栏 -->
+  <div class="M_foot">
+    <!-- 挖个大坑用来放底部通栏 -->
+  </div>
+</body>
+
+</html>
+
+<!-- 图片标题等信息 -->
+<script type="text/html" id="main_info">
+  <div class="info_title">
+    {{result[0].productName}}
+  </div>
+  <div class="info_img">
+    {{@result[0].productImg}}
+  </div>
+  <button class="info_collect">收藏</button>
+</script>
+
+<script type="text/html" id="info_table">
+  {{@result[0].bjShop}}
+</script>
+
+<!-- 商品评价 -->
+<script type="text/html" id="assess_container">
+  {{each result v i}}
+  <div class="container">
+    <div class="ass_top clearfix">
+      <span class="assess_name">{{v.comName}}</span>
+      <span class="assess_time">{{v.comTime}}</span>
+    </div>
+    <div class="ass_market clearfix">
+      <span class="market">{{v.comFrom}}</span>
+    </div>
+    <div class="asses_text">{{v.comContent}}</div>
+  </div>
+  {{/each}}
+</script>
+
+<script src="./lib/js/jquery.min.js"></script>
+<script src="./lib/js/flexible.debug.js"></script>
+<script src="./common/js/route.js"></script>
+<script src="./lib/js/template-web.js"></script>
+<script src="./common/js/tools.js"></script>
+<script src="./common/js/page.js"></script>
+<script src="./js/getproduct.js"></script>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./lib/css/flexible.css">
+  <link rel="stylesheet" href="./css/page_common.css">
+  <link rel="stylesheet" href="./css/page_com.css">
+  <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/moneyctrl.css">
+  <link rel="stylesheet" href="./css/getmoneyctrlproduct.css">
+</head>
+
+<body>
+  <!-- 顶部通栏 -->
+  <header>
+    <!-- 超级大坑用来装header的内容 -->
+  </header>
+  <!-- 商品详细信息 -->
+  <div class="product_content">
+    <!-- 挖坑 -->
+  </div>
+
+  <div class="go_shopping">
+    前往shopping
+  </div>
+
+  <div class="ctrl_pic">
+    <img src="./images/mmbweixin2.png" alt="">
+  </div>
+  <div class="assess_ctrl">
+
+  </div>
+
+
+  <!-- 底部通栏 -->
+  <div class="M_foot">
+    <!-- 挖个大坑用来放底部通栏 -->
+  </div>
+
+</body>
+
+</html>
+<!-- 详细信息 -->
+<script type="text/html" id="product_content">
+  <h1>{{result[0].productName}}</h1>
+  <div>
+    <span>{{result[0].productFrom}}</span>
+    <span>{{result[0].productTime}}</span>
+    <span>{{result[0].productTips}}</span>
+  </div>
+
+  <div class="text">
+
+    <div class="img_right">{{@result[0].productImgSm}}</div>
+    <p class="text_left">{{result[0].productInfo}}</p>
+  </div>
+
+  <div class="text_bottom">{{result[0].productInfo2}}</div>
+  <div class="large_img">
+    {{@result[0].productImg2}}
+  </div>
+  <div class="city_list">
+    {{@result[0].productCity}}
+  </div>
+
+</script>
+
+<!-- 评价 -->
+<script type="text/html" id="assess_ctrl">
+  {{@result[0].productComment}}
+</script>
+
+<script src="./lib/js/jquery.min.js"></script>
+<script src="./lib/js/flexible.debug.js"></script>
+<script src="./common/js/route.js"></script>
+<script src="./lib/js/template-web.js"></script>
+<script src="./common/js/tools.js"></script>
+<script src="./common/js/header.js"></script>
+<script src="./common/js/foot.js"></script>
+<script src="./js/getmoneyctrlproduct.js"></script>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>优惠券</title>
+  <link rel="stylesheet" href="./lib/css/flexible.css">
+  <link rel="stylesheet" href="./css/page_common.css">
+  <link rel="stylesheet" href="./css/page_com.css">
+  <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/coupon.css">
+
+
+</head>
+
+<body>
+  <!-- 顶部通栏 -->
+  <header>
+    <!-- 超级大坑用来装header的内容 -->
+  </header>
+
+  <div class="coipon_content">
+    <ul class="clearfix">
+      <li></li>
+    </ul>
+  </div>
+
+  <!-- 底部通栏 -->
+  <div class="M_foot">
+    <!-- 挖个大坑用来放底部通栏 -->
+  </div>
+
+</body>
+
+</html>
+
+<script type="text/html" id="coipon_content">
+  {{each result v i}}
+  <li>
+    <a href="{{v.couponLink}}?couponid={{v.couponId}}&title={{v.couponTitle}}">
+      <img src=" {{v. couponImg}}" alt="">
+      <p>{{v.couponTitle}}</p>
+    </a>
+  </li>
+
+  {{/each}}
+</script>
+
+
+
+
+
+
+<script src="./lib/js/jquery.min.js"></script>
+<script src="./lib/js/flexible.debug.js"></script>
+<script src="./common/js/route.js"></script>
+<script src="./lib/js/template-web.js"></script>
+<script src="./common/js/tools.js"></script>
+<script src="./common/js/header.js"></script>
+<script src="./common/js/foot.js"></script>
+<script src="./js/coupon.js"></script>

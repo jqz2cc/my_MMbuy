@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>列表页</title>
+
+  <link rel="stylesheet" href="./lib/css/flexible.css">
+  <link rel="stylesheet" href="./css/page_common.css">
+  <link rel="stylesheet" href="./css/page_com.css">
+  <link rel="stylesheet" href="./css/list.css">
+
+</head>
+
+<body>
+  <header>
+    <!-- 挖个大坑用来放顶部通栏 -->
+  </header>
+
+  <!-- 导航地址 -->
+  <div class="nav">
+
+    <!-- 渲染数据 -->
+    <!-- <a href="index.html">首页</a>
+    <span>></span>
+    <a href="category.html">全部分类</a>
+    <span>></span>
+    <a href="#">电视</a>
+    <button>搜索</button> -->
+  </div>
+
+  <!-- 内容区域 -->
+  <div class="categoryLiast_content">
+    <ul class="List">
+      <!-- 挖个大坑 -->
+      <!-- <li class="clearfix">
+        <div class="List_pic">
+          <img src="./images/ic_coudanpin.png" alt="">
+        </div>
+        <div class="List_info">
+          <div class="list_title">
+            哈哈哈哈哈哈哈
+          </div>
+          <div class="list_money">￥9999</div>
+          <div class="price_pj">
+            <span>报价(6)</span>
+            <span>评价(66778)</span>
+          </div>
+        </div>
+      </li> -->
+    </ul>
+
+    <!-- page -->
+    <div class="list_page">
+      <button class="page_up">上一页</button>
+      <select name="" id="select">
+        <!-- 挖个坑 -->
+
+      </select>
+      <button class="page_down">下一页</button>
+    </div>
+  </div>
+
+
+  <!-- 底部通栏 -->
+  <div class="M_foot">
+    <!-- 挖个大坑用来放底部通栏 -->
+  </div>
+</body>
+
+</html>
+
+<!-- 导航栏的地址模板 -->
+<script type="text/html" id="nav">
+  <a href="index.html">首页</a>
+  <span>></span>
+  <a href="category.html">全部分类</a>
+  <span>></span>
+  <a href="#">{{result[0].category}}</a>
+  <button>搜索</button>
+</script>
+
+<!-- 商品列表 -->
+<script type="text/html" id="producelist">
+  {{each result v i}}
+  <li class="clearfix">
+    <a href="getproduct.html?productId={{v.productId}}">
+      <div class="List_pic">
+        {{@v.productImg}}
+      </div>
+      <div class="List_info">
+        <div class="list_title">
+          {{v.productName}}
+        </div>
+        <div class="list_money">{{v.productPrice}}</div>
+        <div class="price_pj">
+          <span>{{v.productQuote}}</span>
+          <span>{{v.productCom}}</span>
+        </div>
+      </div>
+    </a>
+  </li>
+  {{/each}}
+
+</script>
+
+<!-- 分页导航____下拉框 -->
+
+<script type="text/html" id="page_nav">
+  <%  
+   var  num=totalCount/pagesize;
+  for(var i=1;i<=num;i++){
+  %>
+    <option value="{{i}}">{{i}}/{{num}}</option>
+    <% } %>
+</script>
+
+
+
+
+<script src="./lib/js/jquery.min.js"></script>
+<script src="./lib/js/flexible.debug.js"></script>
+<script src="./common/js/route.js"></script>
+<script src="./lib/js/template-web.js"></script>
+<script src="./common/js/tools.js"></script>
+<script src="./common/js/page.js"></script>
+<script src="./js/list.js"></script>

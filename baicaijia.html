@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>白菜价</title>
+  <link rel="stylesheet" href="./lib/css/flexible.css">
+  <link rel="stylesheet" href="./css/page_common.css">
+  <link rel="stylesheet" href="./css/page_com.css">
+  <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/getbaicaijiatitle.css">
+
+</head>
+
+<body>
+  <!-- 顶部通栏 -->
+  <header>
+    <!-- 超级大坑用来装header的内容 -->
+  </header>
+  <!-- 导航栏 -->
+  <div class="product_title">
+    <ul class="clearfix">
+
+    </ul>
+  </div>
+  <div class="product_content">
+    <ul class="clearfix">
+
+    </ul>
+  </div>
+
+
+
+
+  <!-- 底部通栏 -->
+  <div class="M_foot">
+    <!-- 挖个大坑用来放底部通栏 -->
+  </div>
+
+</body>
+
+</html>
+<!-- 模板引擎部分 -->
+<script type="text/html" id="product_title">
+  {{each result v i}}
+  <li class="{{v.titleId==0?'active':" "}}" data-id="{{v.titleId}}">
+    <a href="javascript:;">{{v.title}}</a>
+  </li>
+  {{/each}}
+</script>
+
+
+<!-- 商品列表的模板引擎 -->
+<script type="text/html" id="product_content">
+  {{each result v i}}
+  <li class="clearfix">
+
+    <div class="img_box">
+      {{@v.productImg}}
+    </div>
+    <div class="product_info clearfix">
+
+      <p class="product_name">
+        {{@v.productName}}
+      </p>
+      <p class="product_money">{{@v.productPrice}}</p>
+      {{@v.productCouponRemain}} {{@v.productCoupon}} {{@v.productHref}}
+
+    </div>
+
+
+  </li>
+  {{/each}}
+</script>
+
+
+<script src="./lib/js/jquery.min.js"></script>
+<script src="./lib/js/flexible.debug.js"></script>
+<script src="./common/js/route.js"></script>
+<script src="./lib/js/template-web.js"></script>
+<script src="./common/js/tools.js"></script>
+<script src="./common/js/header.js"></script>
+<script src="./common/js/foot.js"></script>
+<script src="./js/getbaicaijiatitle.js"></script>

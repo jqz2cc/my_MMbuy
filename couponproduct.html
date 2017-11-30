@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>优惠券</title>
+  <link rel="stylesheet" href="./lib/css/flexible.css">
+  <link rel="stylesheet" href="./css/page_common.css">
+  <link rel="stylesheet" href="./css/page_com.css">
+  <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/couponproduct.css">
+
+
+</head>
+
+<body>
+  <!-- 顶部通栏 -->
+  <header>
+    <!-- 超级大坑用来装header的内容 -->
+  </header>
+  <div class="prompt">
+    --点餐前出示手机中的优惠券,既可享受优惠--
+  </div>
+
+  <!-- 商品的内容 -->
+  <div class="coupon_content">
+    <ul class="clearfix">
+      <li></li>
+    </ul>
+  </div>
+
+  <!-- 轮播图 -->
+  <div class="coupon_consort">
+    <div class="img">
+      <img src="./images/haitao.png" alt="">
+    </div>
+    <span class="left">
+      <</span>
+        <span class="right">></span>
+  </div>
+
+  <!-- 底部通栏 -->
+  <div class="M_foot">
+    <!-- 挖个大坑用来放底部通栏 -->
+  </div>
+
+</body>
+
+</html>
+<!-- 模板引擎 -->
+<script type="text/html" id="coupon_content">
+  {{each result v i}}
+  <li class="clearfix" data-id="{{v.couponProductId}}" data-index={{i}}>
+    <div class="img_box">
+      {{@v.couponProductImg}}
+    </div>
+    <div class="info_box">
+      <p class="info_title">{{v.couponProductName}}</p>
+      <span class="info_money">{{v.couponProductPrice}}</span>
+      <p class="info_time">{{v.couponProductTime}}</p>
+    </div>
+  </li>
+  {{/each}}
+
+</script>
+
+
+<script src="./lib/js/jquery.min.js"></script>
+<script src="./lib/js/flexible.debug.js"></script>
+<script src="./common/js/route.js"></script>
+<script src="./lib/js/template-web.js"></script>
+<script src="./common/js/tools.js"></script>
+<script src="./common/js/header.js"></script>
+<script src="./common/js/foot.js"></script>
+<script src="./js/couponproduct.js"></script>

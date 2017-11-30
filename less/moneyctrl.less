@@ -1,0 +1,62 @@
+/*
+ * @Author: 贾倾真 
+ * @Date: 2017-11-29 16:17:54 
+ * @Last Modified by: 贾倾真
+ * @Last Modified time: 2017-11-29 17:28:08
+ */
+ @charset "utf-8";
+ @import url("./base.less");
+ @import url("./common.less");
+ .reset();
+ header{
+  #header{
+    .ta();
+    >a{
+      display: block;
+      .pic_left{
+        .px2rem(height,30);
+        .px2rem(width,30);
+       }
+    }
+    
+    >h2{
+      display: inline-block;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+    }
+   }
+ }
+
+
+// 商品展示
+ .rebate_content_warp{
+   .rebate_content {
+     .bd-none;
+   }
+ }
+
+
+
+//  下一页-----分页
+.page{
+  .w();
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+  >button{
+    .px2rem(width,80);
+    .px2rem(height,35);
+    .bd-none;
+    border-radius: 5px;
+  }
+  >select{
+    border: 1px solid #ccc;
+    .px2rem(width,80);
+    .px2rem(height,35);
+    // padding-left: 10px;
+    .px2rem(padding-left,15);
+    .font-size(30);
+  }
+  
+}

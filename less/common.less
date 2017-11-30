@@ -1,0 +1,134 @@
+// 主要色调
+@base-color:#FF841D;
+
+
+// 高
+.h(@h:40px){
+    height: @h;
+}
+.w(@w:100%){
+    width: @w;
+}
+// 文字居中
+.ta(@ta:center){
+    text-align: @ta;
+}
+// 行高
+.lh(@h:40px){
+    line-height: @h;
+}
+
+
+.fs(@fs:18px){
+    font-size:@fs;
+}
+// 背景色
+.bgc(@c:#fff){
+    background-color: @c;
+}
+.bgi-none(){
+    background-image: none;
+}
+// 取消盒子的阴影
+.bs-none(){
+    box-shadow:none;
+}
+
+/*定位*/
+.pa(){
+    position:absolute;
+}
+.pr(){
+    position: relative;
+}
+.pf(){
+    position: fixed;
+}
+
+
+// display
+.ds(@s:none){
+    display: @s;
+}
+// 关于text的样式
+.td(@d:none){
+    text-decoration: @d;
+}
+.ta(@a:center){
+    text-align:@a;
+}
+.bd-none(){
+    border: none;
+}
+
+// 关于padding的设置
+.pt(@t:20px){
+    padding-top:@t;
+}
+.pb(@b:20px){
+    padding-bottom:@b;
+}
+.pr(@r:5px){
+    padding-right:@r;
+}
+
+.p_a(@t:10px,@r:10px){
+    padding: @t @r;
+}
+.pl(@l:10px){
+    padding-left: @l;
+}
+// 关于margin的设置
+.mr(@r:120px){
+    margin-right: @r;
+}
+// margin
+.ml(@l:50%){
+    margin-left:@l; 
+}
+.mb(@b:20px){
+    margin-bottom: @b;
+}
+.mt(@t:10px){
+    margin-top: @t;
+}
+
+// 关于圆角的设置
+.b_r(@r:50%){
+    border-radius: @r;
+}
+
+// 浮动
+.fl(@l:left){
+    float: @l;
+}
+
+
+// 媒体查询
+@base:round(1/37.5,6)*1rem;
+
+.px2rem(@name,@px){
+    @{name}:round(@px/37.5,6)*1rem;
+}
+
+.font-size(@px){
+    font-size: round(@px/2)*1px;
+    [data-dpr='2']{
+        font-size: @px*1px;
+    }
+     // for mx3
+    [data-dpr='2.5'] & {
+        font-size: round(@px * 2.5 / 2) * 1px;
+    }
+    // for 小米note
+    [data-dpr="2.75"] & {
+        font-size: round(@px * 2.75 / 2) * 1px;
+    }
+    [data-dpr="3"] & {
+        font-size: round(@px / 2 * 3) * 1px
+    }
+    // for 三星note4
+    [data-dpr="4"] & {
+        font-size: @px * 2px;
+    }
+}

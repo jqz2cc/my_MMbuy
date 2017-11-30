@@ -1,0 +1,114 @@
+/*
+ * @Author: 贾倾真 
+ * @Date: 2017-11-30 14:57:32 
+ * @Last Modified by: 贾倾真
+ * @Last Modified time: 2017-11-30 18:06:27
+ */
+
+@charset "utf-8";
+@import url("./base.less");
+@import url("./common.less");
+.reset();
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  .bgc(#F1F1F1);
+}
+
+// 商店
+.shop{
+  >ul{
+    .px2rem(height,38);
+    .bgc(#fff);
+    display: flex;
+    justify-content: space-around;
+    .px2rem(line-height,38);
+    >li{
+        .font-size(30); 
+    }
+  }
+
+}
+// 商店信息
+.shop_info{
+  display: none;
+  .w();
+  .pf();
+  .bgc(#fff);
+  >ul{
+    >li{
+      .px2rem(height,40);
+      .px2rem(line-height,40);
+      .font-size(30);
+      .pl();
+      font-family: '宋体';
+      border-top: 1px solid #cccccc;
+      &:last-of-type{
+        border-bottom: 1px solid #cccccc;
+      }
+      .ok_shop{
+        font-weight: 800;
+        color: #fff;
+        .fr();
+        margin-right: 20px;
+      }
+     
+    }
+    >li.active{
+      .ok_shop{
+        color: rgb(255,153,0);
+      }
+    }
+  }
+}
+
+
+// 商品的内容
+.coupon_content{
+  .px2rem(margin-bottom,15);
+  >ul{
+    // padding: 0 5px;
+    >li{
+      .w(47%);
+     .px2rem(padding,5);
+      // margin: 5px 0;
+      .px2rem(margin,5);
+     
+      .fl();
+      .ta();
+      .bgc(#fff);
+      >img{
+        .px2rem(width,150);
+        .px2rem(height,150);
+      }
+      .name{
+        .px2rem(height,20);
+        overflow: hidden;
+        .px2rem(line-height,20);
+        text-align: left;
+      }
+      .p_s{
+        .price{
+          .fl();
+          .font-size(30);
+          color: #f90;
+          font-weight:900;
+        }
+        .go_shopping{
+          .fr();
+          .px2rem(height,25);
+          .px2rem(width,60);
+          color: #fff;
+          .bgc(#f90);
+          .px2rem(line-height,25);
+          .ta();
+          border-radius: 5px;
+        }
+
+      }
+    }
+  }
+}

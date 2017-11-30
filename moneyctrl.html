@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./lib/css/flexible.css">
+  <link rel="stylesheet" href="./css/page_common.css">
+  <link rel="stylesheet" href="./css/page_com.css">
+  <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/moneyctrl.css">
+
+</head>
+
+
+<body>
+  <!-- 顶部通栏 -->
+  <header>
+    <!-- 超级大坑用来装header的内容 -->
+  </header>
+
+  <!-- 商品内容展示 -->
+  <div class="rebate_content_warp" id="rebate_content_warp">
+    <!-- 超级大坑 -->
+  </div>
+  <!-- 下拉框 -->
+  <div class="page">
+    <button class="product_up">上一页</button>
+    <select name="" id="select">
+
+    </select>
+    <button class="product_down">下一页</button>
+  </div>
+
+  <!-- 底部通栏 -->
+  <div class="M_foot">
+    <!-- 挖个大坑用来放底部通栏 -->
+  </div>
+</body>
+
+</html>
+
+<!-- 中间商品展示的内容 -->
+<script type="text/html" id="rebate_content">
+  {{each result v i}}
+
+  <a href="getmoneyctrlproduct.html?productid={{v.productId}} ">
+    <div class="rebate_content clearfix">
+      <div class="rebate_img">
+        {{@v.productImg2}}
+      </div>
+      <div class="rebate_info">
+        <div class="rebate_top">
+          <span class="rebate_name">{{v.productName}}</span>
+          <span class="rebate_money">{{v.productPinkage}}</span>
+        </div>
+        <div class="rebate_bottom clearfix">
+          <span class="rebate_Market">{{v.productFrom}}</span>
+          <span>|</span>
+          <span class="rebate_time">{{v.productTime}}</span>
+
+          <span class="rebate_num">{{v.productComCount}}</span>
+        </div>
+      </div>
+    </div>
+  </a>
+  {{/each}}
+
+
+
+</script>
+
+<!-- 分页下拉框 -->
+<script type="text/html" id="page">
+  <%  
+ for(var i=1;i<=num;i++){
+ %>
+    <option value="{{i}}">{{i}}/{{num}}</option>
+    <% } %>
+</script>
+<script src="./lib/js/jquery.min.js"></script>
+<script src="./lib/js/flexible.debug.js"></script>
+<script src="./common/js/route.js"></script>
+<script src="./lib/js/template-web.js"></script>
+<script src="./common/js/tools.js"></script>
+<script src="./common/js/header.js"></script>
+<script src="./common/js/foot.js"></script>
+<script src="./js/moneyctrl.js"></script>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./lib/css/flexible.css">
+  <link rel="stylesheet" href="./css/page_com.css">
+  <link rel="stylesheet" href="./css/category.css">
+</head>
+
+<body>
+  <!-- 顶部通栏 -->
+  <header>
+    <!-- 挖个大坑用来放顶部通栏 -->
+  </header>
+
+  <div class="cate_main">
+    <ul class="ul_warp">
+      <!-- 挖个大坑  -->
+      <!-- <li class="li_warp">
+        <span class="row_up"></span>
+        <span class="cate_title">大家电</span>
+        <ul class="inner_warp clearfix">
+          <li>哈哈哈</li>
+          <li>哈哈哈</li>
+          <li>哈哈哈</li>
+          <li>哈哈哈</li>
+          <li>哈哈哈</li>
+          <li>哈哈哈</li>
+          <li>哈哈哈</li>
+        </ul>
+      </li> -->
+    </ul>
+  </div>
+
+
+
+
+  <div class="M_foot">
+    <!-- 挖个大坑用来放底部通栏 -->
+  </div>
+</body>
+
+</html>
+
+
+<!-- 标题数据 -->
+<script type="text/html" id="cate_title">
+  {{each result v i}}
+  <li class="li_warp">
+    <span class="row_up"></span>
+    <span class="cate_title" data-id="{{v.titleId}}">{{v.title}}</span>
+    <ul class="inner_warp clearfix">
+
+    </ul>
+  </li>
+  {{/each}}
+</script>
+<script type="text/html" id="cate_data">
+  {{each result v i}}
+  <li>
+    <a href="categoryList.html?categoryId={{v.categoryId}}&titleId={{v.titleId}}">{{v.category}}</a>
+  </li>
+  {{/each}}
+</script>
+<script src="./lib/js/jquery.min.js"></script>
+<script src="./lib/js/flexible.debug.js"></script>
+<script src="./common/js/route.js"></script>
+<script src="./lib/js/template-web.js"></script>
+<script src="./common/js/page.js"></script>
+<script src="./js/category.js"></script>

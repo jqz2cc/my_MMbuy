@@ -1,0 +1,36 @@
+/*
+ * @Author: 贾倾真 
+ * @Date: 2017-11-30 18:13:33 
+ * @Last Modified by: 贾倾真
+ * @Last Modified time: 2017-11-30 18:38:47
+ */
+
+ @charset "utf-8";
+ @import url("./base.less");
+ @import url("./common.less");
+ .reset();
+ *{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ html,body{
+   .bgc(#fff);
+ }
+
+
+// 商城大全
+.shopCity_content{
+ 
+  .px2rem(padding-left,50);
+  .px2rem(padding-right,50);
+  .px2rem(padding-top,10);
+  .px2rem(padding-bottom,10);
+  >a{
+    display: inline-block;
+    border: 1px solid #ccc;
+    .px2rem(padding,10);
+    .px2rem(margin,2);
+    .bgc(#f1f1f1);
+  }
+}
