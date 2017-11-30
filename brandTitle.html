@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <link rel="stylesheet" href="./lib/css/flexible.css">
+  <link rel="stylesheet" href="./css/page_common.css">
+  <link rel="stylesheet" href="./css/page_com.css">
+  <link rel="stylesheet" href="./css/brandTitle.css">
+</head>
+</head>
+
+<body>
+  <!-- 顶部通栏 -->
+  <header>
+    <!-- 超级大坑用来装header的内容 -->
+  </header>
+  <!-- 导航 -->
+  <div class="product_nav">
+    <a href="index.html">首页</a>
+    <span>></span>
+    <a href="#">全部分类</a>
+    <span>></span>
+
+  </div>
+  <!-- 品牌排行 -->
+  <div class="brand">
+    热门品牌排行
+  </div>
+  <!-- 商品详细信息 -->
+  <div class="product_content">
+    <!-- 挖坑 -->
+    <ul class="clearfix list">
+
+    </ul>
+  </div>
+
+  <!-- 底部通栏 -->
+  <div class="M_foot">
+    <!-- 挖个大坑用来放底部通栏 -->
+  </div>
+
+</body>
+
+</html>
+<script type="text/html" id="product_content">
+  {{each result v i}}
+  <li>
+    <a href="getbrand.html?brandtitleid={{v.brandTitleId}}">
+      <span>{{v.brandTitle}}</span>
+      <span class="arrow"> > </span>
+    </a>
+  </li>
+  {{/each}}
+
+</script>
+
+<script src="./lib/js/jquery.min.js"></script>
+<script src="./lib/js/flexible.debug.js"></script>
+<script src="./common/js/route.js"></script>
+<script src="./lib/js/template-web.js"></script>
+<script src="./common/js/page.js"></script>
+<script src="./js/brandTitle.js"></script>

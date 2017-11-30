@@ -1,0 +1,173 @@
+/*
+ * @Author: 贾倾真 
+ * @Date: 2017-11-30 21:25:41 
+ * @Last Modified by: 贾倾真
+ * @Last Modified time: 2017-12-01 00:50:35
+ */
+
+ @charset "utf-8";
+ @import url("./base.less");
+ @import url("./common.less");
+ .reset();
+
+
+//  导航
+.product_nav{
+  .px2rem(margin-bottom,10);
+  .px2rem(height,35);
+  .px2rem(line-height,35);
+  .font-size(30);
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  .bgc(#F1F1F1);
+  .px2rem(padding-left,10);
+
+   >a{
+    display: inline-block;
+
+   }
+ }
+
+//  平板电视那个牌子好
+.brand{
+  >p{
+    
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    .px2rem(height,35);
+    .px2rem(line-height,35);
+    .font-size(30);
+    .bgc(#F1F1F1);
+    .px2rem(padding-left,10);
+     color: #95684A;
+     font-weight: 800;  
+  }
+
+  // 品牌列表
+  .brand_list{
+    >li{
+      position: relative;
+     
+       border-bottom: 1px solid #ccc;
+       padding: 10px 5px;
+       .top{
+        .first{
+          .px2rem(margin-right,5);
+          .bgc(#ccc);
+          color: #fff;
+          display: inline-block;
+          .px2rem(width,20);
+          .px2rem(height,20);
+          .ta();
+          .px2rem(line-height,20);
+           
+        }
+        .title{
+            .font-size(30);
+            font-weight: 800;
+            color: #000000;
+        }
+       }
+       .num{
+         .px2rem(margin-left,30);
+       }
+       .arrow{
+         .pa();
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-family: '宋体';
+        .font-size(40);
+        .px2rem(margin-right,5);
+    
+       }
+       &:first-of-type{ 
+        .first{
+          .bgc(#F10E0E);
+        }
+       }
+       &:nth-child(2){
+        .first{
+          .bgc(#FF9314);
+        }
+       }
+       &:nth-child(3){
+        .first{
+          .bgc(#8ADF5B);
+        }
+       }
+    }
+  }
+  // 平板电视产品销量排行
+  .product_list{
+   
+    >li{
+   
+      .px2rem(padding-top,10);
+      .px2rem(padding-bottom,10);
+      border-bottom: 1px solid #ccc;
+      .img_box{
+        .fl();
+        .px2rem(width,100);
+        .px2rem(height,100);
+        .px2rem(padding,5);
+        >img{
+            .w();
+            .h(100%);
+        }
+      }
+      // 商品信息
+      .info_box{
+        overflow: hidden;
+        .info_title{
+          color: #000000;
+          .font-size(30);
+          font-weight:800;
+        }
+        .price{
+          .px2rem(padding-top,5);
+          .px2rem(padding-bottom,5);
+          color: #EF5F3C;
+          .font-size(30);
+          
+        }
+        .quote{
+          color: #ccc;
+          .px2rem(margin-top,20);
+        }
+      }
+
+      .com_list{
+        display: none;
+        // border-top: 1px solid #ccc;
+        margin-top: 30px;
+        .com_warp{
+          .px2rem(padding,10);
+           border-top: 1px solid #ccc;
+           .n_t{
+             .com_name{
+               .fl();
+               .font-size(25);
+               color: #000000;
+             }
+             .com_time{
+               .fr();
+             }
+           }
+           .market{
+            .px2rem(padding-top,5);
+            .px2rem(padding-bottom,5);
+             >span{
+               .fr();
+               color: #CD0006;
+             }
+           }
+           .com_text{
+            .font-size(30);
+            color: #000000;
+           }
+        }
+      }
+    }
+  }
+}

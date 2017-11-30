@@ -67,7 +67,17 @@ $(function () {
         $("body").removeClass("change");
         $(this).hide();
 
+      });
+
+      $("coupon_consort .img").on("click", function () {
+        // 点击某张图片上滑动响应的距离
+        // e.stopPropagation();
+
+        // $("body").attr("transfrom", "translateY(" + (50 * index) + "px)");
       })
+
+
+
 
     })
   }

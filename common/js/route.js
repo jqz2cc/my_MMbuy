@@ -2,7 +2,7 @@
  * @Author: 贾倾真 
  * @Date: 2017-11-28 10:12:00 
  * @Last Modified by: 贾倾真
- * @Last Modified time: 2017-11-30 18:12:58
+ * @Last Modified time: 2017-11-30 21:34:59
  */
 (function (window) {
   function routeURL() {}
@@ -141,6 +141,20 @@
   // ------------------------商城导航-------------------------------------
   routeURL.extend({
     getsitenav: routeURL.baseURL + '/api/getsitenav'
+  })
+
+
+  // ------------------------功能大全------------------------------
+  routeURL.extend({
+    // 获取大标题
+    getbrandtitle: routeURL.baseURL + '/api/getbrandtitle',
+    // 品牌
+    getbrand: routeURL.baseURL + '/api/getbrand',
+    // 销量排行
+    getbrandproductlist: routeURL.baseURL + '/api/getbrandproductlist',
+    // 评论
+    getproductcom: routeURL.baseURL + '/api/getproductcom'
+
   })
 
   window.routeURL = routeURL;

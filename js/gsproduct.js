@@ -1,7 +1,5 @@
 $(function () {
-
   $("#header h2").text("凑单品");
-
   // 获取数据
   var url = {
     // 店铺
@@ -16,17 +14,13 @@ $(function () {
     shopid: 0,
     areaid: 0
   }
-
   // 获取数据函数的调用
   ;
   (function () {
     // 店铺数据
     rendershop(url.getgsshop);
-
     // 获取商品数据
     renderproduct(url.getgsproduct);
-
-
   })();
 
   function rendershop(url) {
@@ -36,8 +30,6 @@ $(function () {
 
     })
   }
-
-
   // 点击事件
   // 点击京东的时候获取商铺的数据
   // 点击华北获取地区数据
@@ -53,8 +45,6 @@ $(function () {
   $("body").on("click", function () {
     $(".shop_info").slideUp(300);
   });
-
-
   // 获取商铺id和地区id
   $(".shop_info>ul").on('click', "li", function () {
 
@@ -66,9 +56,7 @@ $(function () {
     renderproduct(url.getgsproduct);
     $(this).addClass("active").siblings().removeClass("active");
 
-
   })
-
   // 给li标签注册点击事件获取
   function renderproduct(url) {
     console.log(ids);
