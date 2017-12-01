@@ -19,10 +19,6 @@ $(function () {
       console.log(info);
       $(".coupon_content ul").html(template("coupon_content", info));
 
-
-
-
-
       // // 轮播图事件
       $(".coupon_content ul li").on("click", function () {
         $("body").addClass("change");
@@ -60,30 +56,22 @@ $(function () {
         $(".coupon_consort .img").html(info.result[index].couponProductImg);
       });
 
-
-
       // 轮播图消失
       $(".coupon_consort").on("click", function (e) {
+        console.log(999);
         $("body").removeClass("change");
         $(this).hide();
 
       });
 
-      $("coupon_consort .img").on("click", function () {
-        // 点击某张图片上滑动响应的距离
-        // e.stopPropagation();
+      // $("coupon_consort .img").on("click", function () {
+      //   // 点击某张图片上滑动响应的距离
+      //   e.stopPropagation();
+      //   console.log(9999);
 
-        // $("body").attr("transfrom", "translateY(" + (50 * index) + "px)");
-      })
-
-
-
-
+      //   $("body").attr("transfrom", "translateY(" + (-50 * index) + "px)");
+      // })
     })
   }
-
-
-
-
 
 })

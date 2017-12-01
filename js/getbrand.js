@@ -39,7 +39,6 @@ $(function () {
     })
   }
 
-
   $(".product_list").on("click", "li", function () {
 
     var productid1 = $(this).data("productid");
@@ -47,6 +46,7 @@ $(function () {
     // 在数据渲染完成之后渲染数据
     setTimeout(function () {
       that.find(".com_list").slideToggle(500);
+
     }, 100)
     // 判断是否点击的是同一个li 标签,如果是,阻止再次渲染
     if (productid == productid1) {

@@ -3,6 +3,18 @@
 @import url("./common.less");
 .reset();
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.M_container{
+  .w();
+min-width: 320px;
+max-width: 640px;
+margin: 0 auto;
+  .bgc(#F1F1F1);
+}
 
 // 详细信息
 .product_content{
@@ -34,6 +46,11 @@
   .large_img{
      display: block;
      .ta();
+     .w();
+     margin: 5px auto;
+     >img{
+       .w();
+     }
      
   }
   .city_list{
@@ -129,6 +146,8 @@
       >ul{
         .ui-border-b{
           .userimg{
+            .px2rem(margin-top,5);
+            .px2rem(margin-right,5);
             .px2rem(width,40);
             .px2rem(height,40);
             .fl();
@@ -140,11 +159,15 @@
             
           }
           .con{
-            // padding: 0 10px;
+            .px2rem(padding,10);
+            border-top: 1px solid #ccc;
             .name{
+              color:#418AB8;
+              
               .time{
                 .fr();
                 margin-top: -15px;
+                color: #ccc;
               }
             }
             .content{

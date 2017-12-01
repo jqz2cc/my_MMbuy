@@ -15,21 +15,19 @@ $(function () {
   function renderMainNav(url) {
     routeURL.getData(url, {}, function (info) {
       console.log(info);
-      var str = info.result[0].img;
-      // console.log(str);
-      // console.log(str.slice(0, str.length));
+
       $(".M_category .MainNav").html(template('category', info));
 
       // 点击更多  添加事件
       $("[data-index='7']").on("click", function () {
         console.log(666);
-        $(".M_category").toggleClass('M_small', 300);
+
+        $(".M_category ul li:gt(7)").slideToggle(300);
       })
 
     });
 
   }
-
 
   function rendergetMoneyCtrl(url) {
     routeURL.getData(url, {}, function (info) {

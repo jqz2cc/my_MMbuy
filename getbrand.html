@@ -16,41 +16,44 @@
 </head>
 
 <body>
-  <!-- 顶部通栏 -->
-  <header>
-    <!-- 超级大坑用来装header的内容 -->
-  </header>
-  <!-- 导航 -->
-  <div class="product_nav">
-    <a href="index.html">首页</a>
-    <span>></span>
-    <a href="#">全部分类</a>
-    <span>></span>
+  <div class="M_container">
 
-  </div>
-  <!-- 品牌排行 -->
-  <div class="brand">
-    <p>平板电视那个牌子好</p>
-    <!-- 十大品牌 -->
-    <ul class="brand_list">
-      <!-- 挖个坑 -->
-    </ul>
-    <p>平板电视产品销量排行</p>
-    <ul class="product_list">
+    <!-- 顶部通栏 -->
+    <header>
+      <!-- 超级大坑用来装header的内容 -->
+    </header>
+    <!-- 导航 -->
+    <div class="product_nav">
+      <a href="index.html">首页</a>
+      <span>></span>
+      <a href="#">全部分类</a>
+      <span>></span>
 
-    </ul>
-  </div>
-  <!-- 商品品牌信息 -->
-  <div class="brand_content">
-    <!-- 挖坑 -->
-    <ul class="clearfix list">
+    </div>
+    <!-- 品牌排行 -->
+    <div class="brand">
+      <p>平板电视那个牌子好</p>
+      <!-- 十大品牌 -->
+      <ul class="brand_list">
+        <!-- 挖个坑 -->
+      </ul>
+      <p>平板电视产品销量排行</p>
+      <ul class="product_list">
 
-    </ul>
-  </div>
+      </ul>
+    </div>
+    <!-- 商品品牌信息 -->
+    <div class="brand_content">
+      <!-- 挖坑 -->
+      <ul class="clearfix list">
 
-  <!-- 底部通栏 -->
-  <div class="M_foot">
-    <!-- 挖个大坑用来放底部通栏 -->
+      </ul>
+    </div>
+
+    <!-- 底部通栏 -->
+    <div class="M_foot">
+      <!-- 挖个大坑用来放底部通栏 -->
+    </div>
   </div>
 
 </body>
@@ -81,7 +84,10 @@
       <div class="info_title">
         {{v.productName}}
       </div>
-      <p class="price">{{v.productPrice}}</p>
+      <p class="price">
+        <span>{{v.productPrice}}</span>
+        <span class="star">★★★★★</span>
+      </p>
       <p class="quote">
         <span>{{v.productQuote}}</span>
         <span>{{v.productCom}}</span>

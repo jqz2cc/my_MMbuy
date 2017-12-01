@@ -2,7 +2,7 @@
  * @Author: 贾倾真 
  * @Date: 2017-11-28 10:44:32 
  * @Last Modified by: 贾倾真
- * @Last Modified time: 2017-11-28 19:44:26
+ * @Last Modified time: 2017-12-01 11:41:41
  */
 
 
@@ -24,8 +24,9 @@ html.body{
 }
 .M_container{
   .w();
-  .px2rem(max-width,750);
-  .px2rem(min-width,320);
+min-width: 320px;
+max-width: 640px;
+margin: 0 auto;
   .bgc(#F1F1F1);
 }
 
@@ -34,9 +35,10 @@ html.body{
 .M_main{
   .w();
   margin-top: 10px;
-  .M_small{
-   .px2rem(height,220);
-  }
+  // .M_small{
+  //  .px2rem(height,220);
+  //  transition: all 1s;
+  // }
   // 分类内容
   .M_category{
     .w();
@@ -57,6 +59,9 @@ html.body{
           >p{
            .ta();
           }
+        }
+        &:nth-child(9),  &:nth-child(10),  &:nth-child(11),  &:nth-child(12){
+          display: none;
         }
       }
     }

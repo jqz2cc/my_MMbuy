@@ -8,6 +8,7 @@ $(function () {
   (function () {
     renderCate(url.getCategoryTitle);
     render(url.getCategorydata);
+
   })();
 
   // 渲染标题数据
@@ -15,6 +16,7 @@ $(function () {
     routeURL.getData(url, {}, function (info) {
       console.log(info);
       $(".ul_warp").html(template("cate_title", info));
+
     })
   }
 
@@ -27,7 +29,7 @@ $(function () {
       var that = $(this);
 
       var id = $(this).data('id');
-      // console.log(id);
+
       routeURL.getData(url, {
         titleid: id
       }, function (info) {
@@ -36,9 +38,6 @@ $(function () {
       })
 
       $(this).siblings(".inner_warp").slideToggle(200);
-
-
-
     })
   }
 

@@ -3,7 +3,15 @@
 @import url("./base.less");
 @import url("./common.less");
 .reset();
-.cate_main{
+
+.M_container{
+  .w();
+min-width: 320px;
+max-width: 640px;
+margin: 0 auto;
+  .bgc(#F1F1F1);
+}
+.product_title{
   .w();
   .ul_warp{
     .w();
@@ -21,6 +29,7 @@
       .cate_title{
         margin-bottom: 10px;
         margin-left: 10px;
+        cursor: pointer;
       }
       // padding: 10px;
       .row_up{

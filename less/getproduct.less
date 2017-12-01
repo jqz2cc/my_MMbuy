@@ -2,7 +2,7 @@
  * @Author: 贾倾真 
  * @Date: 2017-11-29 12:58:10 
  * @Last Modified by: 贾倾真
- * @Last Modified time: 2017-11-29 16:11:39
+ * @Last Modified time: 2017-12-01 10:55:29
  */
  @charset "utf-8";
  @import url("./base.less");
@@ -140,9 +140,11 @@
   }
 
   .info_text{
-      .px2rem(height,60);
       .w();
-      // .px2rem(line-height,60);
+      .px2rem(padding-top,10);
+      .px2rem(padding-bottom,10);
+      .font-size(25);
+      color: #ccc;
       .p_a(10px,5px);
       border-bottom: 1px solid #ccc;
       border-top: 1px solid #ccc;
@@ -163,7 +165,7 @@
 
   .assess_container{
     .container{
-      padding: 10px 5px;
+      .px2rem(padding,10);
       border-bottom: 1px solid #ccc;
       .ass_top{
         .assess_name{
