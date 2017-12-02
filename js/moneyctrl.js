@@ -3,15 +3,23 @@ $(function () {
   var url = {
     getMoneyctrl: routeURL.getMoneyctrl
   }
+  var obj = search();
   var pageid = 1;
   var num = null;
 
-  ;
+  var paidnum = obj.pageid;
+
+  if (location.search.indexOf("pageid") != -1) {
+    pageid = paidnum;
+  }
+  // console.log(paidnum);
+  // console.log(location.search.indexOf("pageid"));
   (function () {
     renderMoney(url.getMoneyctrl);
   })();
 
   function renderMoney(url) {
+
     routeURL.getData(url, {
       pageid: pageid
     }, function (info) {
@@ -51,6 +59,12 @@ $(function () {
     pageid = $("#select option:selected").text().split("/")[0];
 
     renderMoney(url.getMoneyctrl);
+  })
+
+
+  $("#rebate_content_warp").on("click", "a", function () {
+    console.log($(this).data("productid"));
+    location.href = "getmoneyctrlproduct.html?productid=" + $(this).data("productid") + "&pageid=" + pageid;
   })
 
 })

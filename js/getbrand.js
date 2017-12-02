@@ -1,13 +1,23 @@
+/*
+ * @Author: 贾倾真 
+ * @Date: 2017-12-01 10:57:25 
+ * @Last Modified by: 贾倾真
+ * @Last Modified time: 2017-12-02 10:58:57
+ */
+
+
 $(function () {
+  // 地址
   var url = {
     getbrand: routeURL.getbrand,
     getbrandproductlist: routeURL.getbrandproductlist,
     getproductcom: routeURL.getproductcom
   }
   var obj = search();
-  console.log(obj);
-  var productid = null;
 
+  var productid = null;
+  //  给导航设置标题
+  $(".brandTitle").text(obj.name);
 
   var brandtitleid = obj.brandtitleid;
   // console.log(brandtitleid);
@@ -29,12 +39,12 @@ $(function () {
 
   // 获取shangpin列表
   function renderproduct(url) {
-    console.log(url);
+    // console.log(url);
     routeURL.getData(url, {
       brandtitleid: 0,
       pagesize: 4
     }, function (info) {
-      console.log(info);
+      // console.log(info);
       $(".product_list").html(template("product_list", info));
     })
   }

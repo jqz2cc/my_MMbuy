@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>省钱控</title>
   <link rel="stylesheet" href="./lib/css/flexible.css">
   <link rel="stylesheet" href="./css/page_common.css">
   <link rel="stylesheet" href="./css/page_com.css">
@@ -49,8 +49,7 @@
 <!-- 中间商品展示的内容 -->
 <script type="text/html" id="rebate_content">
   {{each result v i}}
-
-  <a href="getmoneyctrlproduct.html?productid={{v.productId}} ">
+  <a href="javascript:;" data-productid={{v.productId}}>
     <div class="rebate_content clearfix">
       <div class="rebate_img">
         {{@v.productImg2}}
@@ -71,9 +70,6 @@
     </div>
   </a>
   {{/each}}
-
-
-
 </script>
 
 <!-- 分页下拉框 -->

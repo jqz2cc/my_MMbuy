@@ -13,6 +13,12 @@ $(function () {
 
     getproDuctlist: routeURL.getproDuctlist
   }
+  var name = null;
+  var product = null;
+  // 获取pageid
+  var pageId = 1;
+  var num = null;
+
 
   ;
   (function () {
@@ -30,14 +36,13 @@ $(function () {
       console.log(info);
 
       $(".nav").html(template("nav", info));
+
+      name = info.result[0].category;
     })
   }
 
 
 
-  // 获取pageid
-  var pageId = 1;
-  var num = null;
 
   function getproDuctlist(url) {
     routeURL.getData(url, {
@@ -47,6 +52,7 @@ $(function () {
       console.log(info);
 
       num = Math.ceil(info.totalCount / info.pagesize);
+
 
       // 渲染商品的详细信息
       $(".List").html(template("producelist", info));
@@ -90,6 +96,14 @@ $(function () {
     pageId = $("#select option:selected").text().split("/")[0];
     // 重新渲染
     getproDuctlist(url.getproDuctlist);
+  });
+
+
+
+  // 跳转
+  $(".List").on("click", 'li', function () {
+    console.log(999);
+    location.href = "getproduct.html?productId=" + $(this).data("productid") + "&productname=" + name;
   })
 
 })

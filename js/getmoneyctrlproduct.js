@@ -19,4 +19,12 @@ $(function () {
       $(".assess_ctrl").html(template("assess_ctrl", info));
     })
   }
+
+
+
+  // 跳转回原页面
+  $("#header a").attr("href", "javascript:;");
+  $("#header a").on("click", function () {
+    location.href = "moneyctrl.html?pageid=" + obj.pageid;
+  })
 })

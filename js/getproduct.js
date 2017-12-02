@@ -2,7 +2,7 @@ $(function () {
 
 
   var obj = search();
-  console.log(obj);
+  $(".nav .categoryname").text(obj.productname);
 
   var url = {
     getproDuct: routeURL.getproDuct,
@@ -21,12 +21,14 @@ $(function () {
     routeURL.getData(url, {
       productid: obj.productId
     }, function (info) {
-      console.log(info);
+
       // 图片标题等信息的渲染
       $(".product_main .main_info").html(template("main_info", info));
 
       // table表格渲染
       $(".product_main .info_table").html(template("info_table", info));
+
+      $(".nav .product_info").text(info.result[0].productName.split(" ")[0]);
 
     })
   }
@@ -36,7 +38,7 @@ $(function () {
     routeURL.getData(url, {
       productid: obj.productId
     }, function (info) {
-      console.log(info);
+      // console.log(info);
       $(".assess_container").html(template("assess_container", info));
     })
   }

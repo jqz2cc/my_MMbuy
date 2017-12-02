@@ -24,10 +24,10 @@
     <!-- 商店 -->
     <div class="shop">
       <ul>
-        <li class="active" data-index="1">
+        <li class="active" data-index="1" title="13">
           <span> 京东</span>
         </li>
-        <li data-index="2">
+        <li data-index="2" title="12">
           <span> 华北</span>
         </li>
         </li>
@@ -63,7 +63,7 @@
 <script type="text/html" id="shop_info">
   {{each result v i}}
   <li data-shopId="{{v.shopId==0?0:v.shopId}}" data-areaId="{{ v.areaId==0?0:v.areaId}}" class="{{v.shopId==0?'active':'' || v.areaId==0?'active':''}}">
-    <span>{{v.shopName || v.areaName}}</span>
+    <span class="name">{{v.shopName || v.areaName}}</span>
     <span class="ok_shop">√</span>
   </li>
   {{/each}}

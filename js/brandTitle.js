@@ -3,9 +3,9 @@ $(function () {
     // 标题
     getbrandtitle: routeURL.getbrandtitle,
 
-
   }
-
+  // var obj = search();
+  // console.log(obj);
   // 获取大标题
   renderTitle(url.getbrandtitle);
 
@@ -15,6 +15,4 @@ $(function () {
       $(".product_content ul").html(template('product_content', info));
     })
   }
-
-
 })
